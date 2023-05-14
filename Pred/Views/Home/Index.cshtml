@@ -1,0 +1,61 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="Admin">
+    <h1>Промышленное предприятие</h1>
+    @if (User.IsInRole("Admin"))
+    {
+        <p class="lead">Создать договор на расходные материалы и техники</p>
+        <p><a href="../Dogovor/Create" class="btn btn-primary btn-lg">Создать заявку &raquo;</a></p>
+        <p class="lead">Посмотреть договоры </p>
+        <p><a href="../Dogovor/MyObject" class="btn btn-primary btn-lg">Просмотр &raquo;</a></p>
+        <p class="lead">Возвраты </p>
+        <p><a href="../Str/MyObject" class="btn btn-primary btn-lg">Просмотр &raquo;</a></p>
+        <p class="lead">Оформить возврат </p>
+        <p><a href="../Str/Create" class="btn btn-primary btn-lg">Создать заявку &raquo;</a></p>
+        <div class="Услуги">
+            <h2>Услуги</h2>
+            <p><a class="btn btn-default" href="../Tarif/Index">Просмотр &raquo;</a></p>
+        </div>
+        <div class="Договоры">
+            <h2>Договоры</h2>
+            <p><a class="btn btn-default" href="../Dogovor/Index">Просмотр &raquo;</a></p>
+        </div>
+        <div class="Возвраты">
+            <h2> Возвраты</h2>
+            <p><a class="btn btn-default" href="../Str/Index">Просмотр &raquo;</a></p>
+        </div>
+    }
+</div>
+
+<div class="Sotrudnik">
+    @if (User.IsInRole("Sotrudnik"))
+    {
+        <p class="lead">Создать договор на расходные материалы и техники</p>
+        <p><a href="../Dogovor/Create" class="btn btn-primary btn-lg">Создать заявку &raquo;</a></p>
+        <p class="lead">Посмотреть договоры </p>
+        <p><a href="../Dogovor/MyObject" class="btn btn-primary btn-lg">Просмотр &raquo;</a></p>
+        <p class="lead">Возвраты </p>
+        <p><a href="../Str/MyObject" class="btn btn-primary btn-lg">Просмотр &raquo;</a></p>
+        <p class="lead">Оформить возврат </p>
+        <p><a href="../Str/Create" class="btn btn-primary btn-lg">Создать заявку &raquo;</a></p>
+        <div class="Услуги">
+            <h2>Услуги</h2>
+            <p><a class="btn btn-default" href="../Tarif/Index">Просмотр &raquo;</a></p>
+        </div>
+    }
+
+</div>
+
+<div class="User">
+    @if (User.IsInRole("user"))
+    {
+        <p class="lead">Создать договор на расходные материалы и техники</p>
+        <p><a href="../Dogovor/Create" class="btn btn-primary btn-lg">Создать заявку &raquo;</a></p>
+        <div class="Услуги">
+            <h2>Услуги</h2>
+            <p><a class="btn btn-default" href="../Tarif/Index">Просмотр &raquo;</a></p>
+        </div>
+    }
+</div>
